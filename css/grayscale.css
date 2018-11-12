@@ -12,8 +12,8 @@
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
+  color: #80bfff;
+  border: 1px solid #80bfff;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -80,9 +80,9 @@
     color: #467370;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: #80bfff;
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: .25rem solid #80bfff;
   }
 }
 
@@ -150,35 +150,46 @@
 }
 
 .btn-primary {
-  background-color: #64a19d;
+  background-color: #80bfff;
 }
 
 .btn-primary:hover {
-  background-color: #4f837f;
+  background-color: #808080;
 }
 
 .btn-primary:focus {
-  background-color: #4f837f;
+  background-color: #808080;
   color: white;
 }
 
 .btn-primary:active {
-  background-color: #467370 !important;
+  background-color: #808080 !important;
 }
 
 .bio-section {
-  padding-top: 10rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+  padding-top: 5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0)));
+  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 1) 75%, rgba(22, 22, 22, 1) 100%);
+}
+
+.bio-section h2 {
+  padding-top: 0rem;
 }
 
 .bio-section p {
-  margin-bottom: 5rem;
+  padding-top: 2rem;
+  margin-bottom: 0rem;
+}
+
+.bio-section hr {
+  border-color: #80bfff;
+  border-width: 0.25rem;
+  width: 15rem;
 }
 
 .projects-section {
   padding: 10rem 0;
-  background-color: #161616
+  Background: linear-gradient(to bottom, rgba(22, 22, 22, 1) 100%, rgba(22, 22, 22, 1) 100%);
 }
 
 .projects-section .featured-text {
@@ -188,7 +199,7 @@
 @media (min-width: 992px) {
   .projects-section .featured-text {
     padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
+    border-left: 0.5rem solid #80bfff;
   }
 }
 
@@ -202,7 +213,7 @@
     padding: 5rem;
   }
   .projects-section .project-text hr {
-    border-color: #64a19d;
+    border-color: #80bfff;
     border-width: .25rem;
     width: 30%;
   }
@@ -247,7 +258,7 @@
 }
 
 .contact-section .card hr {
-  border-color: #64a19d;
+  border-color: #80bfff;
   border-width: 0.25rem;
   width: 3rem;
 }

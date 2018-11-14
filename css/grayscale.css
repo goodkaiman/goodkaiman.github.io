@@ -192,6 +192,12 @@
   Background: linear-gradient(to bottom, rgba(22, 22, 22, .75) 100%, rgba(22, 22, 22, .75) 100%);
 }
 
+.projects-section hr {
+  border-color: #80bfff;
+  border-width: 0.25rem;
+  width: 15rem;
+}
+
 .projects-section .featured-text {
   padding: 2rem;
 }

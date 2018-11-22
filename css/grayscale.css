@@ -11,7 +11,7 @@
 
 #mainNav .navbar-toggler {
   font-size: 80%;
-  padding: 0.75rem;
+  padding: 0.25rem;
   color: #80bfff;
   border: 1px solid #80bfff;
 }
@@ -21,9 +21,11 @@
 }
 
 #mainNav .navbar-brand {
-  color: #161616;
+  color: #80bfff;
   font-weight: 700;
-  padding: .9rem 0;
+  font-size: 4rem
+  width: 100%
+  padding: 0rem;
 }
 
 #mainNav .navbar-nav .nav-item:hover {
@@ -47,7 +49,7 @@
     transition: background-color 0.5s ease-in-out;
   }
   #mainNav .navbar-brand {
-    padding: .5rem 0;
+    padding: .1rem 0;
     color: rgba(255, 255, 255, 0.5);
   }
   #mainNav .nav-link {
@@ -66,7 +68,7 @@
     background-color: #fff;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #161616;
+    color: #80bfff;
   }
   #mainNav.navbar-shrink .nav-link {
     color: #161616;
@@ -154,26 +156,32 @@
 }
 
 .btn-primary:hover {
-  background-color: #808080;
+  background-color: #0059b3;
 }
 
 .btn-primary:focus {
-  background-color: #808080;
+  background-color: #0059b3;
   color: white;
 }
 
 .btn-primary:active {
-  background-color: #808080 !important;
+  background-color: #0059b3 !important;
 }
 
 .bio-section {
-  padding-top: 5rem;
+  padding: 5rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0)));
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, .75) 100%, rgba(22, 22, 22, .75) 100%);
+  background: linear-gradient(to bottom, #161616 0%, #001a33 100%);
 }
 
 .bio-section h2 {
-  padding-top: 0rem;
+  font-family: 'varela round';
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+  background: -webkit-linear-gradient(rgba(225, 225, 255, 1), rgba(225, 225, 255, 0.5));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .bio-section p {
@@ -188,10 +196,19 @@
 }
 
 .projects-section {
-  padding: 10rem 0;
-  Background: linear-gradient(to bottom, rgba(22, 22, 22, .75) 100%, rgba(22, 22, 22, .75) 100%);
+  padding: 5rem;
+  Background: linear-gradient(to bottom, #001a33 0%, #00264d 100%);
 }
 
+.projects-section h2 {
+  font-family: 'varela round';
+  font-size: 2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+  background: -webkit-linear-gradient(rgba(225, 225, 255, 1), rgba(225, 225, 255, 0.5));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
 .projects-section hr {
   border-color: #80bfff;
   border-width: 0.25rem;
@@ -210,19 +227,28 @@
 }
 
 .projects-section .project-text {
-  padding: 1rem;
+  padding: 0rem;
   font-size: 90%;
 }
 
 @media (min-width: 992px) {
   .projects-section .project-text {
-    padding: 1rem;
+    padding: 0rem;
   }
   .projects-section .project-text hr {
     border-color: #80bfff;
     border-width: .25rem;
     width: 30%;
   }
+}
+
+.rcorners{
+  border-radius: 40px;
+}
+.rcorners1 {
+  border-radius: 40px 40px 40px 40px;
+    background: linear-gradient(to bottom, #333333 0%, #1a1a1a 100%);
+    padding: 15px;
 }
 
 .signup-section {
@@ -297,12 +323,12 @@ body {
 }
 
 a {
-  color: #64a19d;
+  color: #80bfff;
 }
 
 a:focus, a:hover {
-  text-decoration: none;
-  color: #3c6360;
+  text-decoration: underline;
+  color: #80bfff;
 }
 
 .bg-black {
@@ -320,115 +346,3 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
-
-.spotlights {
-		border-top: 0 !important;
-
-		& + * {
-			border-top: 0 !important;
-		}
-
-		> section {
-			@include vendor('display', 'flex');
-			@include vendor('flex-direction', 'row');
-			background-color: desaturate(lighten(_palette(bg-alt), 2), 1);
-
-			> .image {
-				background-position: center center;
-				background-size: cover;
-				border-radius: 0;
-				display: block;
-				position: relative;
-				width: 30%;
-
-				img {
-					border-radius: 0;
-					display: block;
-					width: 100%;
-				}
-
-				&:before {
-					background: transparentize(_palette(bg), 0.1);
-					content: '';
-					display: block;
-					height: 100%;
-					left: 0;
-					opacity: 0;
-					position: absolute;
-					top: 0;
-					width: 100%;
-				}
-			}
-
-			> .content {
-				@include vendor('display', 'flex');
-				@include vendor('flex-direction', 'column');
-				@include vendor('justify-content', 'center');
-				@include vendor('align-items', 'center');
-				@include padding(2em, 3em);
-				width: 70%;
-
-				> .inner {
-					margin: 0 auto;
-					max-width: 100%;
-					width: _size(inner);
-				}
-			}
-
-			&:nth-child(2n) {
-				@include vendor('flex-direction', 'row-reverse');
-				background-color: desaturate(lighten(_palette(bg-alt), 4), 2);
-
-				> .content {
-					@include vendor('align-items', 'flex-end');
-				}
-			}
-		}
-
-		@include breakpoint(xlarge) {
-			> section {
-				> .image {
-					width: 40%;
-				}
-
-				> .content {
-					width: 60%;
-				}
-			}
-		}
-
-		@include breakpoint(large) {
-			> section {
-				> .image {
-					width: 45%;
-				}
-
-				> .content {
-					width: 55%;
-				}
-			}
-		}
-
-		@include breakpoint(medium) {
-			> section {
-				display: block;
-
-				> .image {
-					width: 100%;
-				}
-
-				> .content {
-					@include padding(4em, 3em);
-					width: 100%;
-				}
-			}
-		}
-
-		@include breakpoint(small) {
-			> section {
-				> .content {
-					@include padding(3em, 1.5em);
-				}
-			}
-		}
-	}

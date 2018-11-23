@@ -296,10 +296,13 @@
   width: 15rem;
 }
 
-.contact-section .card {
+.contact-section .card a {
   border: 0;
   border-bottom: 0.25rem solid #80bfff;
   background: linear-gradient(to bottom, rgba(51,51,51,.4) 0%, rgba(26,26,26,1) 100%);
+  box-shadow: 0.7rem 1.2875rem 1.2875rem 0 rgba(0, 0, 0, 0.6);
+  transition: all 0.2s ease-in-out;
+  border-radius: 20px
 }
 
 .contact-section .card h4 {
@@ -315,6 +318,15 @@
   width: 3rem;
 }
 
+.contact-section .card a:hover {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
+  transform: scale(.9);
+  text-decoration:none
+}
+
+.contact-section .card a:active {
+  text-decoration: none;
+}
 .contact-section .social {
   margin-top: 5rem;
 }
@@ -327,7 +339,7 @@
   border-radius: 100%;
   line-height: 5rem;
   color: rgba(255, 255, 255, 0.6);
-  box-shadow: 0.4rem 1.2875rem 1.2875rem 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0.7rem 1.2875rem 1.2875rem 0 rgba(0, 0, 0, 0.6);
   transition: all 0.2s ease-in-out;
 }
 
